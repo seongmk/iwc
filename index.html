@@ -45,13 +45,54 @@
       <div class="content">
         <nav class="nav">
           <ul>
-            <li><a href="#" onclick="return false;">메뉴</a></li>
-            <li><a href="#" onclick="return false;">시계</a></li>
+            <li id="submenu_btn"><a href="#" onclick="return false;">메뉴</a></li>
+            <li id="clock_btn"><a href="#" onclick="return false;">시계</a></li>
             <li><a href="#">포르투기저 2020</a></li>
           </ul>
         </nav>
-        <div class="logo">로고</div>
-        <div class="header_icons">아이콘들</div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="로고">
+          </a>
+          </svg>
+        </div>
+        <div class="header_icons">
+          <ul>
+            <li id="search_btn">
+              <a href="#" onclick="return false;">
+                <img src="images/header_icon_01-1.svg" alt="아이콘01">
+                <img src="images/header_icon_01.svg" alt="아이콘01">
+              </a>
+              <form class="search_form">
+                <input type="search" id="search01" placeholder="Search">
+                <input type="button" value="검색">
+              </form>
+            </li>
+            <li id="login_btn">
+              <a href="#" onclick="return false;">
+                <img src="images/header_icon_02-1.svg" alt="아이콘02">
+                <img src="images/header_icon_02.svg" alt="아이콘02">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/header_icon_03-1.svg" alt="아이콘03">
+                <img src="images/header_icon_03.svg" alt="아이콘03">
+              </a>
+            </li>
+            <li id="lang_btn">
+              <a href="#" onclick="return false;">
+                세로선
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="return false;">
+                KR
+                <span>^</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     
