@@ -20,29 +20,42 @@
   <script src="js/jquery-3.5.0.min.js"></script>
   <title>스위스 럭셔리 시계| IWC 샤프하우젠</title>
 
+  <script src="js/skip.js"></script>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/iwc-basic.css">
   <link rel="stylesheet" href="css/skip.css">
+  <link rel="stylesheet" href="css/header.css">
+  
 
   <style>
+
     
   </style>
 </head>
 
 
 <body>
-  <div class="skip">
-    <a href="#">HEADER.SKIPLINKTEXT</a>
-    <a href="#">HEADER.SKIPLINKMENU</a>
-  </div>
-  <script>
-    $(function(){
-      $('.skip>a').focus(function(){
-        $('.skip>a').removeClass('active');
-        $(this).addClass('active');
-      });
-      $('.skip>a').focusout(function(){
-        $('.skip>a').removeClass('active');
-      });
-    })
-  </script>
+  <div class="wrap">
+    <div class="skip">
+      <a href="#">HEADER.SKIPLINKTEXT</a>
+      <a href="#">HEADER.SKIPLINKMENU</a>
+    </div>
+    <header class="header">
+      <div class="content">
+        <nav class="nav">
+          <ul>
+            <li><a href="#" onclick="return false;">메뉴</a></li>
+            <li><a href="#" onclick="return false;">시계</a></li>
+            <li><a href="#">포르투기저 2020</a></li>
+          </ul>
+        </nav>
+        <div class="logo">로고</div>
+        <div class="header_icons">아이콘들</div>
+      </div>
+    </header>
+    
+  </div>  
+  
 </body>
 </html>
