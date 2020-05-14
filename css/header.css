@@ -60,6 +60,7 @@
   display:none;
 }
 
+
 .search_form{
   position:absolute;
   left:0;
@@ -222,7 +223,7 @@
 
 .lang_box{
   position:absolute;
-  right:30px;
+  right:0;
   top:100%;
   width:300px;
   display:none;
@@ -264,7 +265,7 @@
 }
 
 .lang_container>p:nth-of-type(1){
-  text-align: center;
+  text-align:center;
 }
 
 .lang_container>p:nth-of-type(2){
@@ -302,13 +303,14 @@
   text-indent:20px;
 }
 
+.lang_container>ul.lang{
+  height:200px;
+}
+
 .lang_container>ul.national{
   height:200px;
 }
 
-.lang_container>ul.lang{
-  height:200px;
-}
 .rotate_sim{
   display:inline-block;
   transition:0.3s;
