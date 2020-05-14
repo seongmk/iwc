@@ -11,7 +11,13 @@ body{
   color:#000;
 }
 
-.content{
+.content1{
+  width:93.28125%;
+  max-width:1194px;
+  margin:0 auto;
+}
+
+.content2{
   width:73.4375%;
   max-width:940px;
   margin:0 auto;
