@@ -88,11 +88,73 @@
             
             <li id="login_btn">
               <a href="#" onclick="return false;">
-                <img src="images/header_icon_02-1.svg" alt="아이콘02">
+                <img id="login_open_btn" src="images/header_icon_02-1.svg" alt="아이콘02">
                 <img src="images/header_icon_02.svg" alt="아이콘02">
               </a>
-              <form class="login_form"></form>
+              <form class="login_form">
+                <div class="content">
+                  <div class="login_close">
+                    <img id="login_close_btn" src="images/close_img.svg" alt="닫기">
+                  </div>
+                  <div class="iwc_join">
+                    <h2><span>IWC</span>회원가입</h2>
+                    <ul>
+                      <li class="active">로그인</li>
+                      <li>등록</li>
+                    </ul>
+                    <div class="user_id_box">
+                      <label class="active" for="user_id">이메일*</label>
+                      <input type="active" id="user_id">
+                    </div>
+                    <div class="user_pass_box">
+                      <label for="user_pass">패스워드*</label>
+                      <input type="password" id="user_pass">
+                    </div>
+                    <p><a href="#">패스워드를 잊으셨나요?</a></p>
+                    <p><a href="#">포럼에 로그인 하시려면 이곳을 클릭해 주세요</a></p>
+                    <input type="button" value="LOG IN">
+                  </div>
+                </div>
+              </form>
             </li>
+
+            <!-- start login form event -->
+            <script>
+              $(function(){
+                $('#login_open_btn').click(function(){
+                  $('.login_form').show();
+                  $('#user_id').focus();
+                });
+                $('#login_close_btn').click(function(){
+                  $('.login_form').hide();
+                });
+                $('.iwc_join>ul>li').click(function(){
+                  $('.iwc_join>ul>li').removeClass('active');
+                  $(this).addClass('active');
+                });
+                $('.iwc_join>div>input').focus(function(){
+                  $('.iwc_join>div>input').prev().removeClass('active');
+                  $(this).prev().addClass('active');
+                });
+                $('.iwc_join>div>input').focusout(function(){
+                  $('.iwc_join>div>input').prev().removeClass('active');
+                })
+                $('input[value="LOG IN"]').click(function(){
+                  var userId=$('#user_id').val();
+                  console.log(userId);
+                  var userPass=$('#user_pass').val();
+                  console.log(userPass);
+                  if(userId=='' || userPass==''){
+                    $('.iwc_join>div>input').css('border-bottom-color','red');
+                    $('.iwc_join>div>label').css('color','red');
+                    $('.iwc_join>div').addClass('active');
+                    $('#user_id').focus();
+                  }                  
+                });
+              })
+            </script>
+            <!-- end login form event -->
+
             <li>
               <a href="#">
                 <img src="images/header_icon_03-1.svg" alt="아이콘03">
@@ -107,8 +169,77 @@
             <li>
               <a href="#" onclick="return false;">
                 KR
-                <span>^</span>
+                <span class="rotate_sim">^</span>
               </a>
+              <div class="lang_box">
+                <ul class="tri">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="lang_container">
+                  <hr>
+                  <p>IWC에 오신것을 환영합니다</p>
+                  <P>참고: 장바구니는 최초 선택하신 국가에만 저장됩니다.</P>
+                  <h4>위치선택</h4>
+                  <ul class="national">
+                    <li><a href="#">그리스</a></li>
+                    <li><a href="#">노르웨이</a></li>
+                    <li><a href="#">뉴질랜드</a></li>
+                    <li><a href="#">대한민국</a></li>
+                    <li><a href="#">대만</a></li>
+                    <li><a href="#">독일</a></li>
+                    <li><a href="#">러시아</a></li>
+                    <li><a href="#">미국</a></li>
+                    <li><a href="#">말레이시아</a></li>
+                    <li><a href="#">브라질</a></li>
+                    <li><a href="#">벨기에</a></li>
+                    <li><a href="#">스페인</a></li>
+                    <li><a href="#">스위스</a></li>
+                    <li><a href="#">아이슬란드</a></li>
+                    <li><a href="#">이탈리아</a></li>
+                    <li><a href="#">중국</a></li>
+                    <li><a href="#">칠레</a></li>
+                    <li><a href="#">캐나다</a></li>
+                    <li><a href="#">터키</a></li>
+                    <li><a href="#">프랑스</a></li>
+                    <li><a href="#">포르투갈</a></li>
+                    <li><a href="#">홍콩</a></li>
+                  </ul>
+                  <h4>언어선택</h4>
+                  <ul class="lang">
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">프랑스어</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">스페인어</a></li>
+                    <li><a href="#">포르투갈어</a></li>
+                    <li><a href="#">중국어</a></li>
+                    <li><a href="#">일본어</a></li>
+                    <li><a href="#">독일어</a></li>
+                    <li><a href="#">이탈리아어</a></li>
+                    <li><a href="#">태국어</a></li>
+                    <li><a href="#">러시아어</a></li>
+                  </ul>
+                </div>
+              </div>  
+              <!-- start lang_box event -->
+              <script>
+                $(function(){
+                  $('.lang_container>h4').click(function(){
+                    $(this).next().slideToggle(200);
+                  });
+                  $('.lang_container>ul>li').click(function(){
+                    var natLang=$(this).children().text();
+                    $(this).parent().prev().text(natLang);
+                    $(this).parent().slideUp(200);
+                  });
+                  $('#lang_btn').click(function(){
+                    $('.lang_box').toggle();
+                    $('.rotate_sim').delay(3000).toggleClass('active');
+                  });
+                })
+              </script>
+              <!-- end lang_box event -->
             </li>
           </ul>
         </div>
