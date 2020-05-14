@@ -32,6 +32,7 @@
   left:0;
   top:-600%;
   width:100%;
+  transition:0.5s;
 }
 
 .submenu_list{

@@ -27,11 +27,19 @@
   <link rel="stylesheet" href="css/skip.css">
   <link rel="stylesheet" href="css/header.css">
   
-
-  <style>
-
-    
-  </style>
+  <script>
+    // sub menu
+    $(function(){
+      $('#submenu_btn').click(function(){
+        var topVal=$('.submenu').css('top');
+        if(topVal=='80px'){
+          $('.submenu').css('top','-600%').css('background-color','transparent');
+        }else{
+          $('.submenu').css('top','100%').css('background-color','#ffffff');
+        };
+      });
+    })
+  </script>
 </head>
 
 
