@@ -64,15 +64,34 @@
                 <img src="images/header_icon_01.svg" alt="아이콘01">
               </a>
               <form class="search_form">
-                <input type="search" id="search01" placeholder="Search">
+                <input type="search" id="search01" placeholder="검색...">
                 <input type="button" value="검색">
               </form>
             </li>
+
+            <!-- start search event -->
+            <script>
+              $(function(){
+                $('#search_btn').click(function(){
+                  var tmp=$('.search_form').css('display');
+                  if(tmp=='none'){
+                    $('.search_form').css('display','flex');
+                    $('#search01').focus();
+                  }else if(tmp=='flex'){
+                    $('.search_form').css('display','none');
+                    $('#search01').blur();
+                  }
+                });
+              })
+            </script>  
+            <!-- end search event -->
+            
             <li id="login_btn">
               <a href="#" onclick="return false;">
                 <img src="images/header_icon_02-1.svg" alt="아이콘02">
                 <img src="images/header_icon_02.svg" alt="아이콘02">
               </a>
+              <form class="login_form"></form>
             </li>
             <li>
               <a href="#">
