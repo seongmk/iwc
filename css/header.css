@@ -5,7 +5,7 @@
 }
 
 .header>.content1{
-  height:80px;;
+  height:80px;
   display:flex;
   flex-flow:row nowrap;
   justify-content: space-between;
@@ -35,11 +35,24 @@
   height:1000px;
   background:rgba(0,0,0,0.1);
 }
-/* 
-.nav .submenu>.content{
-  width:93.28125%;
-  max-width:1194px;
-} */
+
+.submenu_list{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+}
+
+.submenu_list>li{
+  width:22.75%;
+  margin-bottom:20px;
+  border-top:4px solid black;
+  padding:10px 0 15px 0;
+}
+
+.submenu_list>li:nth-child(5),.submenu_list>li:nth-child(6){
+  width:48.5%
+}
+
 
 
 .logo img{
