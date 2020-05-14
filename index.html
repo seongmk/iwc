@@ -117,7 +117,7 @@
                 </div>
               </form>
             </li>
-
+            
             <!-- start login form event -->
             <script>
               $(function(){
@@ -161,12 +161,12 @@
                 <img src="images/header_icon_03.svg" alt="아이콘03">
               </a>
             </li>
-            <li id="lang_btn">
+            <li>
               <a href="#" onclick="return false;">
                 세로선
               </a>
             </li>
-            <li>
+            <li id="lang_btn">
               <a href="#" onclick="return false;">
                 KR
                 <span class="rotate_sim">^</span>
@@ -226,16 +226,16 @@
               <script>
                 $(function(){
                   $('.lang_container>h4').click(function(){
-                    $(this).next().slideToggle(200);
+                    $(this).next().slideToggle(100);
                   });
                   $('.lang_container>ul>li').click(function(){
                     var natLang=$(this).children().text();
                     $(this).parent().prev().text(natLang);
-                    $(this).parent().slideUp(200);
+                    $(this).parent().slideUp(100);
                   });
                   $('#lang_btn').click(function(){
                     $('.lang_box').toggle();
-                    $('.rotate_sim').delay(3000).toggleClass('active');
+                    $('.rotate_sim').toggleClass('active');
                   });
                 })
               </script>
