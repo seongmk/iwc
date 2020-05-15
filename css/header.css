@@ -41,18 +41,68 @@
   justify-content:space-between;
 }
 
+
 .submenu_list>li{
   width:22.75%;
   margin-bottom:20px;
 }
 
 .submenu_list>li:nth-child(5),.submenu_list>li:nth-child(6){
-  width:48.5%
+  width:48.5%;
+}
+
+@media (max-width:767px){
+  .submenu_list{
+    flex-flow:column nowrap;
+  }
+  .submenu_list>li{
+    width:100%;
+  }
+  .submenu_list>li:nth-child(5),.submenu_list>li:nth-child(6){
+    width:100%;
+  }
+  .submenu_list>li:nth-child(1){
+    order:2
+  }
+  .submenu_list>li:nth-child(2){
+    order:3
+  }
+  .submenu_list>li:nth-child(3){
+    order:4
+  }
+  .submenu_list>li:nth-child(4){
+    order:5
+  }
+  .submenu_list>li:nth-child(5){
+    order:1;
+    margin-bottom:0;
+  }
+  .submenu_list>li:nth-child(6){
+    order:6;
+  }
+  .submenu_list>li:nth-child(5) .submenu_txt{
+    border-top:none;
+  }
+  .submenu_list>li:nth-child(5) .submenu_txt p{
+    display:none;
+  }
+  .submenu_list>li:nth-child(5) .submenu_txt p:last-child{
+    display:block;
+  }
+  .submenu_txt p{
+    font-size:11px;
+  }
+  .submenu_txt p:first-child{
+    font-weight:bold;
+    font-size:12px;
+  }
 }
 
 .submenu_txt{
   border-top:4px solid black;
 }
+
+
 
 .submenu_txt>p{
   padding:8px 0;
@@ -68,8 +118,6 @@
 .txt_bold{
   font-weight:500;
 }
-
-
 
 
 
@@ -105,7 +153,7 @@
   display:none;
 }
 
-
+/* 검색폼 */
 .search_form{
   position:absolute;
   left:0;
