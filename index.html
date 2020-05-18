@@ -6,167 +6,67 @@
   <!-- 제작자 -->
   <meta name="author" content="hong">
   <!-- 설명 -->
-  <meta name="description" content="IWC 사이트입니다">
+  <meta name="description" content="IWC 사이트입니다.">
   <!-- 키워드 -->
-  <meta name="keywords" content="IWC, 시계, 스위스시계, clock, 명품">
+  <meta name="keywords" content="IWC, 아이떠블유씨, clock, 시계, luxury, 명품">
   <!-- 링크공유 -->
-  <meta property="og:title" content="스위스 럭셔리 시계 | IWC 샤프하우젠">
-  <meta property="og:url" content=" https://seongmk.github.io/iwc/">
+  <meta property="og:title" content="IWC">
+  <meta property="og:url" content="https://pam7462.github.io/iwc">
   <meta property="og:image" content="images/ogimage.png">
-  <meta property="og:description" content="뛰어난 기술력과 세련된 디자인의 타임피스를 선보이는 IWC 샤프하우젠 공식 웹사이트 입니다.">
+  <meta property="og:description" content="완벽한 시계 포르투기저는 영원히 멈추지 않습니다">
   <!-- 파비콘 -->
   <link rel="shortcut icon" href="images/favicon.png">
   <!-- jQuery   -->
   <script src="js/jquery-3.5.0.min.js"></script>
-  <title>스위스 럭셔리 시계| IWC 샤프하우젠</title>
-
-  <script src="js/skip.js"></script>
-
+  <title>스위스 럭셔리 시계 | IWC 샤프하우젠</title>
+  <!-- 리셋 -->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/iwc-basic.css">
+  <!-- IWC베이직 -->
+  <link rel="stylesheet" href="css/iwc_basic.css">
+  <!-- 스킵메뉴 -->
   <link rel="stylesheet" href="css/skip.css">
+  <script src="js/skip.js"></script>
+  <!-- 피드백 -->
+  <link rel="stylesheet" href="css/feedback.css">
+  <script src="js/feedback.js"></script>
+  <!-- 헤더 -->
   <link rel="stylesheet" href="css/header.css">
-  
-
-  <!-- start submenu event -->
-  <script>
-    $(function(){
-      $('#submenu_btn').click(function(){
-        var submenuHeight=$('.submenu').height();
-        // console.log(submenuHeight);
-        var submenuBottom=$('.submenu').css('bottom');
-        // console.log(submenuBottom);
-        if(submenuBottom=='80px'){
-          $('.submenu').css('bottom','-'+submenuHeight+'px');
-        }else{
-          $('.submenu').css('bottom','100%');
-        }
-      });
-    })
-  </script>
-  <!-- end submenu event -->
-
-    <!-- start subwatche event -->
-    <script>
-      $(function(){
-        watchePaddingTop();
-  
-        $('#clock_btn').click(function(){
-          watchePaddingTop();
-        });
-  
-        $(window).resize(function(){
-          var subwatcheBottom=$('.subwatche').css('bottom');
-          if(subwatcheBottom!='80px'){
-            watchePaddingTop();
-            fsubwatcheBottom();
-          }
-        });
-  
-        $('#clock_btn').click(function(){
-          
-          // console.log(submenuHeight);
-          var subwatcheBottom=$('.subwatche').css('bottom');
-          // console.log(submenuBottom);
-          if(subwatcheBottom=='80px'){
-            fsubwatcheBottom();
-          }else{
-            $('.subwatche').css('bottom','100%');
-          }
-        });
-        function fsubwatcheBottom(){
-          var subwatcheHeight=$('.subwatche').height();
-          $('.subwatche').css('bottom','-'+subwatcheHeight+'px');
-        }
-        function watchePaddingTop(){
-          var watchesWidth=$('.watches').width();
-          // console.log(watchesWidth);
-          $('.watches').css('padding-top',watchesWidth*1.5+'px');
-        }
-      })
-    </script>
-    <!-- end subwatche event -->
-  
-
-  <!-- start search event -->
-  <script>
-    $(function(){
-      $('#search_btn').click(function(){
-        var tmp=$('.search_form').css('display');
-        if(tmp=='none'){
-          $('.search_form').css('display','flex');
-          $('#search01').focus();
-        }else if(tmp=='flex'){
-          $('.search_form').css('display','none');
-          $('#search01').blur();
-        }
-      });
-    })
-  </script>
-  <!-- end search event -->
- 
-  <!-- start login form event -->
-  <script>
-    $(function(){
-      $('#login_open_btn').click(function(){
-        $('.login_form').show();
-        $('#user_id').focus();
-      });
-      $('#login_close_btn').click(function(){
-        $('.login_form').hide();
-      });
-      $('.iwc_join>ul>li').click(function(){
-        $('.iwc_join>ul>li').removeClass('active');
-        $(this).addClass('active');
-      });
-      $('.iwc_join>div>input').focus(function(){
-        $('.iwc_join>div>input').prev().removeClass('active');
-        $(this).prev().addClass('active');
-      });
-      $('.iwc_join>div>input').focusout(function(){
-        $('.iwc_join>div>input').prev().removeClass('active');
-      })
-      $('input[value="LOG IN"]').click(function(){
-        var userId=$('#user_id').val();
-        console.log(userId);
-        var userPass=$('#user_pass').val();
-        console.log(userPass);
-        if(userId=='' || userPass==''){
-          $('.iwc_join>div>input').css('border-bottom-color','red');
-          $('.iwc_join>div>label').css('color','red');
-          $('.iwc_join>div').addClass('active');
-          $('#user_id').focus();
-        }                  
-      });
-    })
-  </script>
-  <!-- end login form event -->
-
-  <!-- start lang box event -->
-  <script>
-    $(function(){
-      $('.lang_container>h4').click(function(){
-        $(this).next().slideToggle(100);
-      });
-      $('.lang_container>ul>li').click(function(){
-        var natLang=$(this).children().text();
-        $(this).parent().prev().text(natLang);
-        $(this).parent().slideUp(100);
-      });
-      $('#lang_btn').click(function(){
-        $('.lang_box').toggle();
-        $('.rotate_sim').toggleClass('active');
-      });
-    })
-  </script>
-  <!-- end lang box event -->
-
+  <script src="js/header.js"></script>
+  베너
+  <link rel="stylesheet" href="css/banner.css">
 </head>
 <body>
   <div class="wrap">
     <div class="skip">
       <a href="#">HEADER.SKIPLINKTEXT</a>
       <a href="#">HEADER.SKIPLINKMENU</a>
+    </div>
+    <div class="feedback">
+      <div id="feedback_btn">피드백</div>
+      <div class="feedback_content">
+        <div class="feedback_box">
+          <p>x</p>
+          <div class="logo_img">
+            <img src="images/logo.svg" alt="logo">
+          </div>
+          <h3>고객님의 소중한 의견은 IWC 서비스 향상에 매우 중요합니다</h3>
+          <p>오늘은 어떤 종류의 피드백을 남기시겠습니까?<span>*</span></p>
+          <select id="select_option">
+            <option value="">옵션을 선택해 주십시오</option>
+            <option value="">웹사이트</option>
+            <option value="">라디오</option>
+            <option value="">텔레비전</option>
+            <option value="">SNS</option>
+          </select>
+          <p>담당자와의 연락을 원하시면 아래에 이메일 주소를 남겨주십시오.</p>
+          <input type="text">
+          <p>본 양식에서는 고객 서비스 문의를 처리하지 않습니다</p>
+          <div class="button_box">
+            <input type="button" value="닫기">
+            <input type="button" value="보내기">
+          </div>
+        </div>
+      </div>
     </div>
     <header class="header">
       <div class="content1">
@@ -179,28 +79,28 @@
                   <ul class="submenu_list">
                     <li>
                       <div class="submenu_txt">
-                        <p>더 보기</p>
+                        <p>더보기</p>
                         <p><a href="#">신제품 시계</a></p>
                         <p><a href="#">모든 시계</a></p>
-                        <p><a href="#">스트랩</a></p>
+                        <p><a href="#">스트렙</a></p>
                       </div>
                     </li>
                     <li>
                       <div class="submenu_txt">
-                        <p>시계서비스</p>
+                        <p>시계 서비스</p>
                         <p><a href="#">공식 서비스 센터 찾아보기</a></p>
-                        <p><a href="#">My IWC - 품질 보증 연장</a></p>
-                        <p><a href="#">매뉴얼 및 품질 보증</a></p>
+                        <p><a href="#">My IWC 품질 보증 연장</a></p>
+                        <p><a href="#">메뉴얼 및 품질 보증</a></p>
                         <p><a href="#">고객 서비스 개요</a></p>
-                        <p><a href="#">항성시를 계산해 보세요.</a></p>
+                        <p><a href="#">항성시를 계산해 보세요</a></p>
                       </div>
                     </li>
                     <li>
                       <div class="submenu_txt">
                         <p>IWC 샤프하우젠 워치메이킹</p>
-                        <p><a href="#">IWC 메뉴픽처</a></p>
+                        <p><a href="#">IWC 매뉴팩처</a></p>
                         <p><a href="#">칼리버</a></p>
-                        <p><a href="#">컴플맄이션</a></p>
+                        <p><a href="#">컴플리케이션</a></p>
                         <p><a href="#">IWC 컬렉션 소개</a></p>
                         <p><a href="#">지난 컬렉션 검색</a></p>
                       </div>
@@ -208,7 +108,7 @@
                     <li>
                       <div class="submenu_txt">
                         <p>IWC의 세계</p>
-                        <p><a href="#">IWC 최신 소식 - 더 저널</a></p>
+                        <p><a href="#">IWC 최신 소식 / 저널</a></p>
                         <p><a href="#">IWC 샤프하우젠 뮤지엄</a></p>
                         <p><a href="#">IWC 샤프하우젠 소개</a></p>
                         <p><a href="#">IWC 뉴스 & 이벤트</a></p>
@@ -217,9 +117,12 @@
                     <li>
                       <div class="submenu_txt">
                         <p>가까운 부티끄</p>
-                        <p><a href="#">IWC SCHAFFHAUSEN BOUTIQUE - SEOUL AVENUEL</a></p>
-                        <p><a href="#">73 Namdaemun-ro Jung-gu, Lotte Department Store Avenuel 2nd Floor, Seoul 04533, KR</a></p>
-                        <p><a href="#">+82 2 3789 5555</a></p>
+                        <p>
+                          IWC SCHAFFHAUSEN BOUTIQUE - SEOUL AVENUEL
+                          <br>
+                          73 Namdaemun-ro Jung-gu, Lotte Department Store Avenuel 2nd Floor, Seoul 04533, KR
+                          <br> +82 2 3789 5555
+                        </p>
                         <p class="txt_bold"><a href="#">다른 매장 찾기</a></p>
                       </div>
                     </li>
@@ -227,12 +130,12 @@
                       <div class="submenu_txt">
                         <p>문의처 한국</p>
                         <p class="txt_bold"><a href="#">이메일</a></p>
-                        <p><a href="#">+82 2 3440 5876</a></p>
+                        <p class="txt_bold"><a href="#">+82 2 3440 5876</a></p>
                       </div>
                       <div class="submenu_txt">
                         <p>뉴스레터</p>
-                        <p>IWC 샤프하우젠의 세계에 대한 최신 소식을 정기적으로 받아보세요</a></p>
-                        <p class="txt_bold"><a href="#">뉴스레터 구독하기</a></p>
+                        <p>IWC 샤프하우젠의 세계에 대한 최신 소식을 정기적으로 받아보세요</p>
+                        <p class="txt_bold"><a href="#">뉴스레터 구독하기</a></p>                        
                       </div>
                     </li>
                   </ul>
@@ -244,16 +147,16 @@
               <div class="subwatche">
                 <div class="content1">
                   <ul class="subwatche_list">
-                    <li class="collectin">
+                    <li class="collection">
                       <div class="coll_tit">
-                        <h4>컬렉션 살펴보기</h4>
+                        <h4>컬랙션 살펴보기</h4>
                         <p>
                           <a href="#">IWC 컬렉션 소개</a>
                         </p>
                       </div>
                       <div class="coll_content">
                         <div class="watches">
-                          <img src="images/watch01.webp" alt="watch01">
+                          <img src="images/watches01.webp" alt="watches01">
                           <p>
                             <a href="#">
                               파일럿워치<br>
@@ -262,7 +165,7 @@
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch02.webp" alt="watch02">
+                          <img src="images/watches02.webp" alt="watches02">
                           <p>
                             <a href="#">
                               포르투기저<br>
@@ -271,34 +174,34 @@
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch03.webp" alt="watch03">
+                          <img src="images/watches03.webp" alt="watches03">
                           <p>
                             <a href="#">
-                              포르토피노<br>
+                              포르투기저<br>
                               <span>46시계</span>
                             </a>
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch04.webp" alt="watch04">
+                          <img src="images/watches04.webp" alt="watches04">
                           <p>
                             <a href="#">
-                              다 빈치<br>
+                              다빈치<br>
                               <span>16시계</span>
                             </a>
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch05.webp" alt="watch05">
+                          <img src="images/watches05.webp" alt="watches05">
                           <p>
                             <a href="#">
-                              엔제니어<br>
+                              인제니어<br>
                               <span>7시계</span>
                             </a>
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch06.webp" alt="watch06">
+                          <img src="images/watches06.webp" alt="watches06">
                           <p>
                             <a href="#">
                               아쿠아타이머<br>
@@ -307,7 +210,7 @@
                           </p>
                         </div>
                         <div class="watches">
-                          <img src="images/watch01.webp" alt="watch01">
+                          <img src="images/watches07.webp" alt="watches07">
                           <p>
                             <a href="#">
                               주빌레 컬렉션<br>
@@ -321,34 +224,60 @@
                       <ul class="watche_list">
                         <li>
                           <p>나의 IWC 모델 찾아보기</p>
-                          <p><a href="#">타임피스 전체보기</a></p>
-                          <p><a href="#">리미티드 에디션</a></p>
-                          <p><a href="#">신제품 시계</a></p>
+                          <p>
+                            <a href="#">타임피스 전체 보기</a>
+                          </p>
+                          <p>
+                            <a href="#">리미티드 에디션</a>
+                          </p>
+                          <p>
+                            <a href="#">신제품 시계</a>
+                          </p>
                         </li>
                         <li>
-                          <p>시계특징</p>
-                          <p><a href="#">블루 다이얼</a></p>
-                          <p><a href="#">레더 스트랩</a></p>
-                          <p><a href="#">골드 케이스</a></p>
-                          <p><a href="#">필터 모두 보기</a></p>
+                          <p>시계 특징</p>
+                          <p>
+                            <a href="#">블루 다이얼</a>
+                          </p>
+                          <p>
+                            <a href="#">레더 스트랩</a>
+                          </p>
+                          <p>
+                            <a href="#">골드 케이스</a>
+                          </p>
+                          <p>
+                            <a href="#">필터 모두 보기</a>
+                          </p>
                         </li>
                         <li>
                           <p>사이즈별 보기</p>
-                          <p><a href="#">44+ MM</a></p>
-                          <p><a href="#">40-43 MM</a></p>
-                          <p><a href="#">34-39 MM</a></p>
+                          <p>
+                            <a href="#">44+ MM</a>
+                          </p>
+                          <p>
+                            <a href="#">40-43+ MM</a>
+                          </p>
+                          <p>
+                            <a href="#">34-39+ MM</a>
+                          </p>
                         </li>
                         <li>
                           <p>컴플리케이션별 보기</p>
-                          <p><a href="#">퍼페추얼 캘린터</a></p>
-                          <p><a href="#">더블 크로노그래프 . 라트라팡트</a></p>
-                          <p><a href="#">문 페이즈 디스플레이</a></p>
+                          <p>
+                            <a href="#">퍼페추얼 캘린더</a>
+                          </p>
+                          <p>
+                            <a href="#">더블 크로느그래프 / 라트라팡트</a>
+                          </p>
+                          <p>
+                            <a href="#">문 페이즈 디스플레이</a>
+                          </p>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div>                 
             </li>
             <li>
               <a href="#">포르투기저 2020</a>
@@ -359,57 +288,54 @@
           <a href="index.html">
             <img src="images/logo.svg" alt="로고">
           </a>
-          </svg>
         </div>
         <div class="header_icons">
           <ul>
             <li>
               <a id="search_btn" href="#" onclick="return false;">
-                <img src="images/header_icon_01-1.svg" alt="아이콘01">
-                <img src="images/header_icon_01.svg" alt="아이콘01">
+                <img src="images/header_icons_01-1.svg" alt="icon01-1">
+                <img src="images/header_icons_01.svg" alt="icon01">
               </a>
               <form class="search_form">
                 <input type="search" id="search01" placeholder="검색...">
                 <input type="button" value="검색">
               </form>
             </li>
-
             <li id="login_btn">
               <a href="#" onclick="return false;">
-                <img id="login_open_btn" src="images/header_icon_02-1.svg" alt="아이콘02">
-                <img src="images/header_icon_02.svg" alt="아이콘02">
+                <img id="login_open_btn" src="images/header_icons_02-1.svg" alt="icon02-1">
+                <img src="images/header_icons_02.svg" alt="icon02">
               </a>
               <form class="login_form">
                 <div class="content1">
                   <div class="login_close">
-                    <img id="login_close_btn" src="images/close_img.svg" alt="닫기">
+                    <img id="login_close_btn" src="images/close_img.svg" alt="close_img">
                   </div>
                   <div class="iwc_join">
-                    <h2><span>IWC</span>회원가입</h2>
+                    <h2><span>IWC</span> 회원가입</h2>
                     <ul>
                       <li class="active">로그인</li>
                       <li>등록</li>
                     </ul>
                     <div class="user_id_box">
                       <label class="active" for="user_id">이메일*</label>
-                      <input type="active" id="user_id">
+                      <input class="active" type="text" id="user_id">
                     </div>
                     <div class="user_pass_box">
                       <label for="user_pass">패스워드*</label>
                       <input type="password" id="user_pass">
                     </div>
                     <p><a href="#">패스워드를 잊으셨나요?</a></p>
-                    <p><a href="#">포럼에 로그인 하시려면 이곳을 클릭해 주세요</a></p>
-                    <input type="button" value="LOGIN">
+                    <p><a href="#">포럼에 로그인하시려면 이곳을 클릭해 주세요</a></p>
+                    <input type="button" value="LOG IN">
                   </div>
                 </div>
               </form>
             </li>
-            
             <li>
               <a href="#">
-                <img src="images/header_icon_03-1.svg" alt="아이콘03">
-                <img src="images/header_icon_03.svg" alt="아이콘03">
+                <img src="images/header_icons_03-1.svg" alt="icon03-1">
+                <img src="images/header_icons_03.svg" alt="icon03">
               </a>
             </li>
             <li>
@@ -418,7 +344,7 @@
               </a>
             </li>
             <li>
-              <a  id="lang_btn" href="#" onclick="return false;">
+              <a id="lang_btn" href="#" onclick="return false;">
                 KR
                 <span class="rotate_sim">^</span>
               </a>
@@ -430,57 +356,57 @@
                 </ul>
                 <div class="lang_container">
                   <hr>
-                  <p>IWC에 오신것을 환영합니다</p>
-                  <P>참고: 장바구니는 최초 선택하신 국가에만 저장됩니다.</P>
-                  <h4>위치선택</h4>
+                  <p>IWC에 오신것을 환영합니다.</p>
+                  <p>참고: 장바구니는 최초 선택하신 국가에만 저장됩니다.</p>
+                  <h4>위치 선택</h4>
                   <ul class="national">
-                    <li><a href="#">그리스</a></li>
-                    <li><a href="#">노르웨이</a></li>
-                    <li><a href="#">뉴질랜드</a></li>
+                    <li><a href="#">가나</a></li>
+                    <li><a href="#">가봉</a></li>
+                    <li><a href="#">나이지리아</a></li>
                     <li><a href="#">대한민국</a></li>
-                    <li><a href="#">대만</a></li>
-                    <li><a href="#">독일</a></li>
-                    <li><a href="#">러시아</a></li>
+                    <li><a href="#">라트비아</a></li>
                     <li><a href="#">미국</a></li>
-                    <li><a href="#">말레이시아</a></li>
-                    <li><a href="#">브라질</a></li>
                     <li><a href="#">벨기에</a></li>
-                    <li><a href="#">스페인</a></li>
-                    <li><a href="#">스위스</a></li>
-                    <li><a href="#">아이슬란드</a></li>
-                    <li><a href="#">이탈리아</a></li>
-                    <li><a href="#">중국</a></li>
+                    <li><a href="#">사우디아라비아</a></li>
+                    <li><a href="#">알제리</a></li>
+                    <li><a href="#">자메이카</a></li>
                     <li><a href="#">칠레</a></li>
-                    <li><a href="#">캐나다</a></li>
-                    <li><a href="#">터키</a></li>
-                    <li><a href="#">프랑스</a></li>
-                    <li><a href="#">포르투갈</a></li>
+                    <li><a href="#">케나다</a></li>
+                    <li><a href="#">태국</a></li>
+                    <li><a href="#">파라과이</a></li>
                     <li><a href="#">홍콩</a></li>
                   </ul>
-                  <h4>언어선택</h4>
+                  <h4>언어 선택</h4>
                   <ul class="lang">
                     <li><a href="#">영어</a></li>
-                    <li><a href="#">프랑스어</a></li>
-                    <li><a href="#">한국어</a></li>
-                    <li><a href="#">스페인어</a></li>
-                    <li><a href="#">포르투갈어</a></li>
+                    <li><a href="#">아랍어</a></li>
                     <li><a href="#">중국어</a></li>
                     <li><a href="#">일본어</a></li>
-                    <li><a href="#">독일어</a></li>
-                    <li><a href="#">이탈리아어</a></li>
-                    <li><a href="#">태국어</a></li>
-                    <li><a href="#">러시아어</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">프랑스어</a></li>
+                    <li><a href="#">스페인어</a></li>
                   </ul>
                 </div>
               </div>
-
             </li>
+
           </ul>
         </div>
       </div>
     </header>
-    
-  </div>  
-  
+    <section class="section banner">
+      <article class="main_banner">
+        메인베너
+      </article>
+      <article class="service_8years">
+        <p>여기에 등록하시면 2년의 표준 국제 품질 보증 기간에 6년을 추가로 연장 받으실 수 있습니다:</p>
+        <a href="#">시계등록하기</a>
+        <div class="image">
+          <img src="images/year8.webp" alt="years8">
+        </div>
+      </article>
+    </section>
+  </div>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+
+.service_8years{
+    height:300px;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service_8years .image{
+    width:300px;
+}
+
+.service_8years .image img{
+    width:100%;
+}
+
+
