@@ -16,3 +16,8 @@
   background-color:#000000;
   color:#ffffff;
 }
+#link_top>a.active::before{
+  content:'맨위로';
+  display:inline-block;
+  margin-right:10px;
+}

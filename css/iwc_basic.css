@@ -39,10 +39,10 @@ body{
 .sec_txt>p{
   margin:20px 0;
 }
-.sec_txt>p>a{
+a{
   transition:0.3s;  
 }
-.sec_txt>p>a:hover{
+a:hover{
   color:#b19c5e;
 }
 .sec_img>img{

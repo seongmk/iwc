@@ -10,6 +10,16 @@
   transform:translate3d(54px,0,0);
   cursor: pointer;
 }
+.swiper-pagination>span{
+  background-color:#ffffff;
+  width:12px;
+  height:12px;
+}
+.swiper-pagination>span.swiper-pagination-bullets-active{
+  width:10px;
+  height:10px;
+}
+
 .swiper-slide>img{
   position: absolute;
   left:50%;
