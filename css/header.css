@@ -442,13 +442,6 @@
   .coll_tit p{
     font-size:16px;
   }
-  .coll_tit p a{
-    color:#999999;
-    transition:0.2s;
-  }
-  .coll_tit p a:hover{
-    color:#b19c5e;
-  }
   .coll_content{
     flex-flow:row wrap;
   }
